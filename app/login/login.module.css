@@ -1,0 +1,31 @@
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fafafa;
+}
+
+.loginForm {
+  background-color: white;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  width: 300px;
+}
+
+.inputGroup {
+  margin-bottom: 1rem;
+}
+
+.input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+}
+
+.errorText {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
