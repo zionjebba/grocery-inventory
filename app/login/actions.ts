@@ -21,9 +21,13 @@ const loginSchema = z.object({
 });
 
 export async function login(prevState: any, formData: FormData) {
-  // Parse form data
-  const result = loginSchema.safeParse(Object.fromEntries(formData));
 
+ if (!formData) {
+    console.error("FormData is undefined");
+    return { error: "Invalid form submission" };
+  }
+    // Parse form data
+  const result = loginSchema.safeParse(Object.fromEntries(formData));
   // If validation fails
   if (!result.success) {
     return {
